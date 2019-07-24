@@ -1,0 +1,32 @@
+{
+  "name": "webapi-i-guided",
+  "version": "1.0.0",
+  "description": "Web API I Guided Project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/webapi-i-guided.git"
+  },
+  "keywords": [
+    "node",
+    "backend",
+    "guided",
+    "lambda",
+    "api"
+  ],
+  "author": "Lambda School",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/webapi-i-guided/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/webapi-i-guided#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "knex": "^0.18.3",
+    "sqlite3": "^4.0.9"
+  }
+}
