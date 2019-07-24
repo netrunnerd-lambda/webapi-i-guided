@@ -50,4 +50,16 @@ server.put('/hubs/:id', (req, res) => {
     .catch(err => res.status(500).json({ success: false, err }));
 });
 
+server.delete('/hubs/:id', (req, res) => {
+  const { id } = req.params;
+
+  db
+    .remove(id)
+    .then(removed => {
+      if (removed) res.status(200).json({ success: true, message: `HUB ${id} REMOVED` });
+      else res.status(404).json({ success: false, message: 'NEW PHONE. WHO DIS?!'});
+    })
+    .catch(err => res.status(500).json({ success: false, err }));
+}); 
+
 server.listen(port, _ => console.log(`listening on port ${port}`));

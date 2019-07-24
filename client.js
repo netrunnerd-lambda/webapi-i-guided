@@ -16,6 +16,11 @@ console.log('METHOD: ', method);
 
 if (id) {
   switch (method) {
+    case 'DELETE':
+      return axios
+                  .delete(endpoint + `/${id}`)
+                  .then(res => response(res.data))
+                  .catch(err => console.error(err.response.data));
     case 'GET':
       return axios
                   .get(endpoint + `/${id}`)
